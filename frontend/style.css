@@ -1,0 +1,225 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D&auto=format&fit=crop&w=1964&q=80'); /* Add your background image here */
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    animation: slideUp 0.5s ease-in-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin-bottom: 2rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Upload Form */
+.upload-box {
+    border: 2px dashed #3498db;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    background: rgba(52, 152, 219, 0.1);
+    cursor: pointer;
+    transition: border-color 0.3s ease, background 0.3s ease;
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+.upload-box:hover {
+    border-color: #2980b9;
+    background: rgba(52, 152, 219, 0.2);
+}
+
+.upload-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+#file-name {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+.upload-button {
+    background: #3498db;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+}
+
+.upload-button:hover {
+    background: #2980b9;
+}
+
+#image-file {
+    display: none;
+}
+
+.submit-button {
+    background: #2ecc71;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    width: 100%;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.submit-button:hover {
+    background: #27ae60;
+    transform: scale(1.05);
+}
+
+/* Result Card */
+.result-card {
+    margin-top: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: left;
+    display: none; /* Hidden by default */
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.image-preview {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+#uploaded-image {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.output-section h2 {
+    font-size: 1.25rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.output-text {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 1rem;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Optional: Custom styling for the detailed description */
+#detailed-description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+#objects {
+    list-style-type: none;
+    padding: 0;
+}
+
+#objects li {
+    background: #fff;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    margin-bottom: 0.5rem;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Analysis Type Dropdown */
+.analysis-type {
+    margin-bottom: 1.5rem;
+}
+
+.analysis-type label {
+    font-size: 1rem;
+    color: #7f8c8d;
+}
+
+.analysis-type select {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #3498db;
+    background: rgba(52, 152, 219, 0.1);
+    color: #333;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.analysis-type select:hover {
+    background: rgba(52, 152, 219, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+    }
+}

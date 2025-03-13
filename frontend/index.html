@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Captioning with AI</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Image Captioning with AI</h1>
+        <p class="subtitle">Upload an image and let AI generate a caption, detect objects, and classify the context.</p>
+
+        <form id="upload-form">
+            <div class="upload-box">
+                <label for="image-file" class="upload-label">
+                    <span id="file-name">Choose an image...</span>
+                    <span class="upload-button">Browse</span>
+                </label>
+                <input type="file" id="image-file" name="image-file" accept="image/*" required>
+            </div>
+
+            <!-- Dropdown for analysis type -->
+            <div class="analysis-type">
+                <label for="analysis-type">Select Analysis Type:</label>
+                <select id="analysis-type" name="analysis-type">
+                    <option value="general">General Analysis</option>
+                    <option value="medical">Medical Image Analysis</option>
+                    <option value="social">Social Media Tool</option>
+                    <option value="quick">Quick Analysis</option>
+                </select>
+            </div>
+
+            <button type="submit" class="submit-button">Generate Analysis</button>
+        </form>
+
+        <!-- Image Preview -->
+        <div class="image-preview">
+            <img id="uploaded-image" src="#" alt="Uploaded Image" style="display: none; max-width: 100%; height: auto;">
+        </div>
+
+        <!-- Analysis Results -->
+        <div id="result" class="result-card" style="display: none;">
+
+            <!-- General Analysis Section -->
+            <div id="general-section" class="output-section" style="display: none;">
+                <h2>Caption:</h2>
+                <p id="general-caption" class="output-text">Caption will appear here...</p>
+                <h2>Detailed Description:</h2>
+                <p id="detailed-description" class="output-text">Detailed description will appear here...</p>
+                <h2>Detected Objects:</h2>
+                <ul id="objects" class="output-text">
+                    <li>Objects will appear here...</li>
+                </ul>
+                <h2>Context:</h2>
+                <p id="context" class="output-text">Context will appear here...</p>
+            </div>
+
+            <!-- Social Media Section -->
+            <div id="social-section" class="output-section" style="display: none;">
+                <h2>Caption:</h2>
+                <p id="social-caption" class="output-text">Caption will appear here...</p>
+                <h2>Hashtags:</h2>
+                <p id="hashtags" class="output-text">Hashtags will appear here...</p>
+                <h2>Engagement Tips:</h2>
+                <p id="engagement-tips" class="output-text">Engagement tips will appear here...</p>
+            </div>
+
+            <!-- Medical Image Analysis Section -->
+            <div id="medical-section" class="output-section" style="display: none;">
+                <h2>Medical Description:</h2>
+                <p id="medical-description" class="output-text">Medical description will appear here...</p>
+                <h2>Detected Anatomy:</h2>
+                <ul id="anatomy" class="output-text">
+                    <li>Anatomy will appear here...</li>
+                </ul>
+            </div>
+
+            <!-- Quick Analysis Section -->
+            <div id="quick-section" class="output-section" style="display: none;">
+                <h2>Caption:</h2>
+                <p id="quick-caption" class="output-text">Caption will appear here...</p>
+                <h2>Detected Objects:</h2>
+                <ul id="quick-objects" class="output-text">
+                    <li>Objects will appear here...</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
