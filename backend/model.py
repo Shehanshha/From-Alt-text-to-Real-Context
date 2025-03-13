@@ -103,7 +103,7 @@ def generate_detailed_description(image):
 
     # Add API key as a query parameter
     params = {
-        "key": "AIzaSyBc1C6HZlNnubqBtOK1QeWtz5-t0m_Wn48"  # Your Gemini API key
+        "key": "Your Gemini API key"  # Your Gemini API key
     }
 
     try:
